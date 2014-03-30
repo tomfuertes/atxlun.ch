@@ -19,6 +19,7 @@ $('.btn-success').on('click', function () {
         var length = $lunch.length;
         if (length === 1) {
             window.clearInterval(timeout);
+            window.ga('send', 'event', 'lunch', 'random', $lunch.first().find('img').attr('title'));
             window.alert($lunch.first().find('img').attr('title'));
             return;
         }
