@@ -2,7 +2,7 @@
 
 // isotope after window.load
 $(window).load(function () {
-    $('.row.marketing').show()
+    $('.row.marketing')
         .isotope({
             itemSelector: '.lunch'
         });
@@ -12,31 +12,40 @@ $(window).load(function () {
 $('.btn-success').on('click', function () {
 
     var timeout;
+    var $lunchables = $('.lunch');
+    var $container = $('.row.marketing');
+    var chosenIndex = Math.floor(Math.random() * $lunchables.length);
+    var $chosenOne = $($lunchables[chosenIndex]);
+    var $removeables = $lunchables.filter(function (idx) {
+        return idx === chosenIndex ? false : true;
+    });
 
-    (function removeItems() { // instant setTimeout pattern
+    $container.isotope('on', 'layoutComplete', removeItems);
+    removeItems();
+    var i = 0;
 
-        var $lunch = $('.lunch');
-        var length = $lunch.length;
-        console.log(length);
-        if (length <= 1) {
-            // debugger;
-            window.ga('send', 'event', 'lunch', 'random', $lunch.first().find('img').attr('title'));
-            window.clearInterval(timeout);
-            window.alert($lunch.first().find('img').attr('title'));
-            return;
-        }
+    function removeItems() { // instant setInterval pattern
+        timeout = window.setTimeout(function () {
 
-        var $removeables = $lunch.filter(function () {
-            return Math.random() > 0.5;
-        });
+            var $els = $container.isotope('getItemElements');
 
-        // don't remove everything!
-        if ($removeables.length !== $lunch.length) {
-            $('.row.marketing').isotope('remove', $removeables);
-        }
+            console.log($els.length);
 
-        timeout = window.setTimeout(removeItems, 1000); // has to be > animations / 800
+            if ($els.length === 1) {
+                window.clearInterval(timeout);
+                window.ga('send', 'event', 'lunch', 'random', $chosenOne.find('img').attr('title'));
+                window.alert($chosenOne.find('img').attr('title'));
+                return;
+            }
 
-    })();
-
+            // remove and layout
+            $container
+                .isotope('remove', $removeables.filter(function () {
+                    return Math.random() > 0.75;
+                }))
+                .isotope({
+                    sortBy: ++i % 2 ? 'random' : 'original-order'
+                });
+        }, 10);
+    }
 });
