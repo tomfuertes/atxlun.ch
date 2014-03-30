@@ -9,7 +9,9 @@ $(window).load(function () {
 });
 
 // random lunch on button click
-$('.btn-success').on('click', function () {
+$('.btn-success').on('click', function (e) {
+
+    e.preventDefault();
 
     var timeout;
     var $lunchables = $('.lunch');
