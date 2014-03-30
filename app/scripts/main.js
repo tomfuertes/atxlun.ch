@@ -38,18 +38,15 @@ $.get(
     // debugger;
 
     $('.row.marketing')
-        .html($items) //;
+        .html($items).hide();
 
-    // window.setTimeout(function () {
-    //     $('.row.marketing')
-    .isotope({
-        itemSelector: '.lunch'
-    });
-    // }, 1000);
+    window.setTimeout(function () {
+        $('.row.marketing').show()
+            .isotope({
+                itemSelector: '.lunch'
+            });
+    }, 2500);
 
-    // $('.row.marketing').append($items);
-
-    // alert($('h1', txt)[Math.floor(Math.random() * $('h1', txt).length)].innerText);
 }, function (e) {
     window.alert(e);
 });
