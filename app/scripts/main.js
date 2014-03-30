@@ -1,72 +1,30 @@
 'use strict';
 
-var template = [
-    '<div class="lunch col-xs-4 col-sm-3 col-md-2">',
-    '    <img class="media-object" src="IMG_SRC" title="MEDIA_HEADING">',
-    // '  <div class="media-body">',
-    // '  </div>',
-    '</div>'
-].join('\n');
-
-// call from any page w/ jquery
-$.get(
-    'http://www.corsproxy.com/www.atasteofkoko.com/100-things-you-need-to-eat-this-summer-in-austin/'
-).then(function (txt) {
-
-    // var $txt = $(txt);
-    var $meals = $('h1', txt).filter(function () {
-        return /^\d+\./.test($.trim($(this).text()));
-    });
-    var $images = $meals.map(function (idx, el) {
-        return $(el).nextUntil('h1').find('img');
-    });
-
-    // console.log($meals);
-    // console.log($images);
-
-    // console.log($items);
-
-    var $items = $meals.map(function (idx, el) {
-        return $(
-            template.replace(/MEDIA_HEADING/g, $(el).text())
-            .replace(/IMG_SRC/g, $images[idx].attr('src'))
-        )[0].outerHTML;
-    }).get().sort(function () {
-        return Math.random() - 0.5;
-    }).join('');
-
-    // debugger;
-
-    $('.row.marketing')
-        .html($items).hide();
-
-    window.setTimeout(function () {
-        $('.row.marketing').show()
-            .isotope({
-                itemSelector: '.lunch'
-            });
-    }, 2500);
-
-}, function (e) {
-    window.alert(e);
+// isotope after window.load
+$(window).load(function () {
+    $('.row.marketing').show()
+        .isotope({
+            itemSelector: '.lunch'
+        });
 });
 
-
+// random lunch on button click
 $('.btn-success').on('click', function () {
 
     var timeout;
 
-    timeout = window.setInterval(function () {
+    (function removeItems() { // instant setInterval pattern
+
         var $lunch = $('.lunch');
         var length = $lunch.length;
         if (length === 1) {
             window.clearInterval(timeout);
-            // window.alert('done!');
+            window.alert($lunch.first().find('img').attr('title'));
             return;
         }
 
         var $removeables = $lunch.filter(function () {
-            return Math.random() > 0.8;
+            return Math.random() > 0.5;
         });
 
         // don't remove everything!
@@ -75,6 +33,9 @@ $('.btn-success').on('click', function () {
         }
 
         $('.row.marketing').isotope('remove', $removeables);
-    }, 1000);
+
+        timeout = window.setInterval(removeItems, 850); // has to be > animations / 800
+
+    })();
 
 });
