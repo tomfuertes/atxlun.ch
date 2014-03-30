@@ -6,6 +6,10 @@
     "jquery": "~1.10.2"
   },
   "devDependencies": {
-    "isotope": "~1.5.26"
+    "isotope": "~1.5.26",
+    "jquery": "1.11.0"
+  },
+  "resolutions": {
+    "jquery": "1.11.0"
   }
 }
