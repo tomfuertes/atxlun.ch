@@ -5,5 +5,7 @@
     "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git#v3.1.0",
     "jquery": "~1.10.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "isotope": "~1.5.26"
+  }
 }
