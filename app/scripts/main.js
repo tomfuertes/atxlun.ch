@@ -13,13 +13,15 @@ $('.btn-success').on('click', function () {
 
     var timeout;
 
-    (function removeItems() { // instant setInterval pattern
+    (function removeItems() { // instant setTimeout pattern
 
         var $lunch = $('.lunch');
         var length = $lunch.length;
-        if (length === 1) {
-            window.clearInterval(timeout);
+        console.log(length);
+        if (length <= 1) {
+            // debugger;
             window.ga('send', 'event', 'lunch', 'random', $lunch.first().find('img').attr('title'));
+            window.clearInterval(timeout);
             window.alert($lunch.first().find('img').attr('title'));
             return;
         }
@@ -29,13 +31,11 @@ $('.btn-success').on('click', function () {
         });
 
         // don't remove everything!
-        if ($removeables.length === $lunch.length) {
-            return;
+        if ($removeables.length !== $lunch.length) {
+            $('.row.marketing').isotope('remove', $removeables);
         }
 
-        $('.row.marketing').isotope('remove', $removeables);
-
-        timeout = window.setInterval(removeItems, 850); // has to be > animations / 800
+        timeout = window.setTimeout(removeItems, 1000); // has to be > animations / 800
 
     })();
 
