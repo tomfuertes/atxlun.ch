@@ -22,8 +22,10 @@ $('.btn-success').on('click', function () {
 
     $container.isotope('on', 'layoutComplete', removeItems);
     removeItems();
-    var i = 0;
 
+
+    /*jshint latedef:false*/
+    var i = 0;
     function removeItems() { // instant setInterval pattern
         timeout = window.setTimeout(function () {
 

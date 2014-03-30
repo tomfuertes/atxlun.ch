@@ -6333,7 +6333,7 @@ body {
   max-width: 100%;
 }
 
-/*.isotope-item {
+.isotope-item {
   z-index: 2;
 }
 
@@ -6355,4 +6355,3 @@ body {
   transition-property: -webkit-transform, opacity;
   transition-property: transform, opacity;
 }
-*/
