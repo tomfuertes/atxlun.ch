@@ -8,9 +8,5 @@
   "devDependencies": {
     "isotope": "2.0.0-beta.10",
     "jquery": "1.11.0"
-  },
-  "resolutions": {
-    "jquery": "1.11.0",
-    "isotope": "2.0.0-beta.10"
   }
 }

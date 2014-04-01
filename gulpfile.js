@@ -7,7 +7,8 @@ var wiredep = require('wiredep').stream;
 
 // Load plugins
 var $ = require('gulp-load-plugins')();
-
+$.connect = require("gulp-connect"); // doesn't support lazy load
+$.useref = require("gulp-useref"); // doesn't support lazy load
 
 // Styles
 gulp.task('styles', function () {
