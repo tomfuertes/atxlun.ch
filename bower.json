@@ -1,9 +1,9 @@
 {
-  "name": "random-lunch",
+  "name": "atxlun-ch",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git#v3.1.0",
-    "jquery": "~1.10.2"
+    "bootstrap-sass": "twbs/bootstrap-sass#~3.1.0",
+    "jquery": "~1.11.0"
   },
   "devDependencies": {
     "isotope": "2.0.0-beta.10",
