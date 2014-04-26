@@ -6,406 +6,616 @@ var DESERT = 'desert';
 var LAZYSUNDAY = 'lazysunday';
 var ALCOHOL = 'alcohol';
 
+var TODO = 'TODO'; // not gonna finish this in time
+
+// locations:
+var D = 'dt';
+var S = 'soco';
+var N = 'north';
+var E = 'east';
+
+// time: TODO / fill in with ints
+
 var LUNCHABLES = [{
   name: '46. Slow smoked brisket // Hoover\'s',
   image: './images/slow-smoked-brisket-hoovers.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '45. Filet Mignon Pho // PhoNatic',
   image: './images/filet-mignon-pho-phonatic.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [N],
+  time: [TODO]
 }, {
   name: '60. Cochinita Pibil // El Chilito',
   image: './images/cochinita-pibil-el-chilito.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '72. Hongos y huitlacoche // La Condesa ',
   image: './images/hongos-y-huitlacoche-la-condesa-.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '2. Croque Madame // Epicerie',
   image: './images/croque-madame-epicerie.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [D, N],
+  time: [TODO]
 }, {
   name: '9. Banana Bourbon Pie // Cake &amp; Spoon',
   image: './images/banana-bourbon-pie-cake-spoon.jpg',
-  categories: [DESERT]
+  categories: [DESERT],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '42. The Love Cleanse // Daily Juice',
   image: './images/the-love-cleanse-daily-juice.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '74. Crab Cake Mache &amp; Frisee Salad // Clark\'s Oyster Bar',
   image: './images/crab-cake-mache-frisee-salad-clarks-oyster-bar.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '19. Puffy tacos // El Chilito',
   image: './images/puffy-tacos-el-chilito.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '29. Creme brûlée steamer // The Steeping Room',
   image: './images/creme-brulee-steamer-the-steeping-room.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [N],
+  time: [TODO]
 }, {
   name: '63. Grilled Lamb Chops // Corazon at Castle Hill',
   image: './images/grilled-lamb-chops-corazon-at-castle-hill.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '87. Dipping Ramen // Ramen Tatsu-ya',
   image: './images/dipping-ramen-ramen-tatsu-ya.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [N],
+  time: [TODO]
 }, {
   name: '22. Lomo Saltado // Llama\'s Food Trailer',
   image: './images/lomo-saltado-llamas-food-trailer.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '64. Blueberry Danish // Quack\'s Bakery',
   image: './images/blueberry-danish-quacks-bakery.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '34. Farm egg // Olive &amp; June',
   image: './images/farm-egg-olive-and-june.jpg',
-  categories: [LUNCH, LAZYSUNDAY]
+  categories: [LUNCH, LAZYSUNDAY],
+  loc: [D, N],
+  time: [TODO]
 }, {
   name: '84. East Side Hero // Whisler\'s',
   image: './images/east-side-hero-whislers.jpg',
-  categories: [LAZYSUNDAY, ALCOHOL]
+  categories: [LAZYSUNDAY, ALCOHOL],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '31. Iced Vietnamese Coffee // Thunderbird Coffee',
   image: './images/iced-vietnamese-coffee-thunderbird-coffee.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [N],
+  time: [TODO]
 }, {
   name: '18. Patbingsu // Tour Les Jour',
   image: './images/patbingsu-tour-les-jour.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '4. Pan Roasted Hamburger // Clark\'s Oyster Bar',
   image: './images/pan-roasted-hamburger-clarks-oyster-bar.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '36. Spiked frozen custard // Yeti Frozen Custard',
   image: './images/spiked-frozen-custard-yeti-frozen-custard.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '91. Fruit Salad // Cenote',
   image: './images/fruit-salad-cenote.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '20. Paloma // Hillside Farmacy',
   image: './images/paloma-hillside-farmacy.jpg',
-  categories: [ALCOHOL, LAZYSUNDAY]
+  categories: [ALCOHOL, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '89. Korean Bulgogi Burger // Chi\'Lantro BBQ',
   image: './images/korean-bulgogi-burger-chilantro-bbq.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '58. Shrimp Chelada // El Alma\'s',
   image: './images/shrimp-chelada-el-almas.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '30. Doughnut burger // Gourdough\'s',
   image: './images/doughnut-burger-gourdoughs.jpg',
-  categories: [LUNCH, LAZYSUNDAY, DESERT]
+  categories: [LUNCH, LAZYSUNDAY, DESERT],
+  loc: [S],
+  time: [TODO]
 }, {
   name: '33. Oyster Tacos // Garrido\'s',
   image: './images/oyster-tacos-garridos.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '54. Indian Cuisine // G\'Raj Mahal',
   image: './images/indian-cuisine-graj-mahal.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '95. Mango Sticky Rice // Thai Passion',
   image: './images/mango-sticky-rice-thai-passion.jpg',
-  categories: [DESERT]
+  categories: [DESERT],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '83. Strawberry Jalapeño Profiteroles  // Mulberry',
   image: './images/strawberry-jalapeno-profiteroles-mulberry.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '86. Nutella Milkshake // Hopdoddy',
   image: './images/nutella-milkshake-hopdoddy.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [S, N],
+  time: [TODO]
 }, {
   name: '50. Roasted Tomato Soup // Trento Austin',
   image: './images/roasted-tomato-soup-trento-austin.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '92. Cinnamon Rolls // Contigo',
   image: './images/cinnamon-rolls-contigo.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '53. Lobster Rolls // Garbos Lobster Truck',
   image: './images/lobster-rolls-garbos-lobster-truck.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '47. Ice Cream Sandwiches // Coolhaus',
   image: './images/ice-cream-sandwiches-coolhaus.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '75. Hazelnut Chocolate Budino // Backspace',
   image: './images/hazelnut-chocolate-budino-backspace.jpg',
-  categories: [DESERT]
+  categories: [DESERT],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '55. Who Dat Sammie // Austin Daily Press',
   image: './images/who-dat-sammie-austin-daily-press.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '51. Chicken BLT // Bacon Restaurant',
   image: './images/chicken-blt-bacon-restaurant.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '11. Primetime burger // Hopdoddy',
   image: './images/primetime-burger-hopdoddy.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [S, N],
+  time: [TODO]
 }, {
   name: '97. Blanco Mule // Clark\'s Oyster Bar',
   image: './images/blanco-mule-clarks-oyster-bar.jpg',
-  categories: [ALCOHOL]
+  categories: [ALCOHOL],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '14. Beers and tacos // Papi Tino\'s',
   image: './images/beers-and-tacos-papi-tinos.jpg',
-  categories: [LUNCH, ALCOHOL, LAZYSUNDAY]
+  categories: [LUNCH, ALCOHOL, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '62. Crispy Spicy Chicken Wings with Yogurt Sauce // Say La V',
   image: './images/crispy-spicy-chicken-wings-with-yogurt-sauce-say-la-v.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '35. Honey rosemary fried chicken // Salty Sow',
   image: './images/honey-rosemary-fried-chicken-salty-sow.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '49. Chai French Toast // The Steeping Room',
   image: './images/chai-french-toast-the-steeping-room.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [N],
+  time: [TODO]
 }, {
   name: '93. Hawaiian Pork Belly Bites // The Peached Tortilla',
   image: './images/hawaiian-pork-belly-bites-the-peached-tortilla.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '61. Gourmet Grilled Cheese Sandwiches // Burro Cheese Kitchen',
   image: './images/gourmet-grilled-cheese-sandwiches-burro-cheese-kitchen.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '94. Pimms Cup// Clark\'s Oyster Bar',
   image: './images/pimms-cup-clarks-oyster-bar.jpg',
-  categories: [ALCOHOL]
+  categories: [ALCOHOL],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '81. Wagyu Beef Hot Rock // Uchi',
   image: './images/wagyu-beef-hot-rock-uchi.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [S],
+  time: [TODO]
 }, {
   name: '5. Texas-style brisket // Franklin\'s BBQ',
   image: './images/texas-style-brisket-franklins-bbq.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '98. Kimchi Ramen // Kome Austin',
   image: './images/kimchi-ramen-kome-austin.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [N],
+  time: [TODO]
 }, {
   name: '77. Lobster Rolls // Dock and Roll',
   image: './images/lobster-rolls-dock-and-roll.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '80. Aperol Spritz // Olive &amp; June',
   image: './images/aperol-spritz-olive-june.jpg',
-  categories: [ALCOHOL]
+  categories: [ALCOHOL],
+  loc: [D, N],
+  time: [TODO]
 }, {
   name: '43. Fajitas On The Grill // Benji\'s Cantina',
   image: './images/fajitas-on-the-grill-benjis-cantina.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '69. Flan Latte // Dominican Joe',
   image: './images/flan-latte-dominican-joe.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [S],
+  time: [TODO]
 }, {
   name: '23. Crawfish tacos // Turf and Surf',
   image: './images/crawfish-tacos-turf-and-surf.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '71. Miso Marinated Mero // The Carillon',
   image: './images/miso-marinated-mero-the-carillon.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '100. Fresh Fruit &amp; FroYo // Yogurtland',
   image: './images/fresh-fruit-froyo-yogurtland.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '48. Chicken Fried Egg // Barley Swine',
   image: './images/chicken-fried-egg-barley-swine.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [S],
+  time: [TODO]
 }, {
   name: '6. Pork belly tacos // The Peached Tortilla',
   image: './images/pork-belly-tacos-the-peached-tortilla.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '37. Brazilian Empanadas // Rio\'s Brazilian Cafe',
   image: './images/brazilian-empanadas-rios-brazilian-cafe.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '3. Grilled Texas Peaches // Swift\'s Attic',
   image: './images/grilled-texas-peaches-swifts-attic.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '12. Fried milk at Uchiko',
   image: './images/fried-milk-at-uchiko.jpg',
-  categories: [LUNCH, LAZYSUNDAY]
+  categories: [LUNCH, LAZYSUNDAY],
+  loc: [D, N],
+  time: [TODO]
 }, {
   name: '65. Ahi Tuna Salad // Snap Kitchen',
   image: './images/ahi-tuna-salad-snap-kitchen.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '88. Mexican Vanilla Ice Cream // Amy\'s Ice Cream',
   image: './images/mexican-vanilla-ice-cream-amys-ice-cream.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [D, N, S],
+  time: [TODO]
 }, {
   name: '68. Pork belly slider // Lucky Robot',
   image: './images/pork-belly-slider-lucky-robot.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '32. Caraibe terrine // The Carillon',
   image: './images/caraibe-terrine-the-carillon.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '38. Iced Coconut Oolong Tea // Zhi Tea',
   image: './images/iced-coconut-oolong-tea-zhi-tea.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '78. Mexican Brunch // Julio\'s',
   image: './images/mexican-brunch-julios.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '82. Thai Ice Cream // Thrice Bakery',
   image: './images/thai-ice-cream-thrice-bakery.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '79. Fried Calamari // NoRTH',
   image: './images/fried-calamari-north.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '99. Takoyaki // Love Balls Bus',
   image: './images/takoyaki-love-balls-bus.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '10. Iced vanilla lattes // Patika Coffee',
   image: './images/iced-vanilla-lattes-patika-coffee.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '21. Crispy polenta cakes // Winflo Osteria',
   image: './images/crispy-polenta-cakes-winflo-osteria.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '1. Steelhead Crisp // Lenoir',
   image: './images/steelhead-crisp-lenoir.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [S],
+  time: [TODO]
 }, {
   name: '41. Son In Law // Sway Thai',
   image: './images/son-in-law-sway-thai.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [S],
+  time: [TODO]
 }, {
   name: '28. Vietnamese spring rolls // Thanh Nhi',
   image: './images/vietnamese-spring-rolls-thanh-nhi.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '70. Zucchini Chips // NoRTH',
   image: './images/zucchini-chips-north.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '15. Cacio e Pepe // Patrizi\'s Austin',
   image: './images/cacio-e-pepe-patrizis-austin.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '59. Brussels Sprout Caesar Salad // Salty Sow',
   image: './images/brussels-sprout-caesar-salad-salty-sow.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '25. Seafood cerviche // La Condesa',
   image: './images/seafood-cerviche-la-condesa.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '13. The Salty Sweet // Cow Tipping Creamery',
   image: './images/the-salty-sweet-cow-tipping-creamery.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '16. Kimchi fries // Chi\'Lantro BBQ',
   image: './images/kimchi-fries-chilantro-bbq.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '24. Grilled blackened redfish // TRACE',
   image: './images/grilled-blackened-redfish-trace.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '76. Seared Foie Gras Nigiri // Uchi',
   image: './images/seared-foie-gras-nigiri-uchi.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [S],
+  time: [TODO]
 }, {
   name: '85. Butcher\'s Burger // Salt and Time',
   image: './images/butchers-burger-salt-and-time.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '56. Sweet Potato Donut Holes // Say La V',
   image: './images/sweet-potato-donut-holes-say-la-v.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '96. Tom Kha // Thai Passion',
   image: './images/tom-kha-thai-passion.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '26. Roast marshmallows // Halcyon',
   image: './images/roast-marshmallows-halcyon.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '57. Butter Coffee // Picnik Austin',
   image: './images/butter-coffee-picnik-austin.jpg',
-  categories: [LAZYSUNDAY]
+  categories: [LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '90. Korokee // Fresh Off the Truck',
   image: './images/korokee-fresh-off-the-truck.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '40. Thai Tea Affogato // Sway Thai',
   image: './images/thai-tea-affogato-sway-thai.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [S],
+  time: [TODO]
 }, {
   name: '67. Mt Everest Snow Ice Dessert // Teapioca Lounge',
   image: './images/mt-everest-snow-ice-dessert-teapioca-lounge.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '7. Fried Brussels Sprouts Salad // East Side King',
   image: './images/fried-brussels-sprouts-salad-east-side-king.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [D, E],
+  time: [TODO]
 }, {
   name: '39. Iced Vanilla Lattes // Vintage Heart Coffee',
   image: './images/iced-vanilla-lattes-vintage-heart-coffee.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [E],
+  time: [TODO]
 }, {
   name: '17. Bianca pizza // Backspace Pizza',
   image: './images/bianca-pizza-backspace-pizza.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '44. Cheesecake Sopapillas // Benji\'s Cantina',
   image: './images/cheesecake-sopapillas-benjis-cantina.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '66. Tiramisu French Toast // Winflo Osteria',
   image: './images/tiramisu-french-toast-winflo-osteria.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '8. Sno cones // Sno Beach',
   image: './images/sno-cones-sno-beach.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [D],
+  time: [TODO]
 }, {
   name: '27. Beef tongue hash // Contigo',
   image: './images/beef-tongue-hash-contigo.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '52. Goat Cheese Thyme &amp; Honey Ice Cream // Lick Ice Creams',
   image: './images/goat-cheese-thyme-honey-ice-cream-lick-ice-creams.jpg',
-  categories: [DESERT, LAZYSUNDAY]
+  categories: [DESERT, LAZYSUNDAY],
+  loc: [TODO],
+  time: [TODO]
 }, {
   name: '73. Lobster &amp; Farm Egg En Cocottee // Clark\'s Oyster Bar',
   image: './images/lobster-farm-egg-en-cocottee-clarks-oyster-bar.jpg',
-  categories: [LUNCH]
+  categories: [LUNCH],
+  loc: [D],
+  time: [TODO]
 }];
 
 var TEMPLATE = function (lunch) {
